@@ -1,9 +1,5 @@
-const app = require('./app');
-require('./database');
+import app from "./app";
+import "./database";
 
-async function init() {
-    await app.listen(3000);
-    console.log('Server on port 3000');
-}
-
-init();
+app.listen(3000);
+console.log("Server on port 3000");

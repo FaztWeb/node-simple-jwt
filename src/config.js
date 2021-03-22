@@ -1,3 +1,4 @@
-module.exports = {
-    secret: 'mysecretkey'
-}
+export default {
+  secret: "mysecretkey",
+  port: process.env.PORT || 3000,
+};

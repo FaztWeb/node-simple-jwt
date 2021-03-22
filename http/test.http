@@ -1,0 +1,60 @@
+### Public Routes
+
+GET http://localhost:3000/
+
+### 
+GET http://localhost:3000/about
+
+### Test private routes with Token
+GET http://localhost:3000/me
+
+### Register an user
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+  "username": "Ryan Ray",
+  "email": "ryanray@gmail.com",
+  "password": "somepassword"
+}
+
+### Signin an user
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "ryanray@gmail.com",
+  "password": "somepassword"
+}
+
+### get the private route with a token
+GET http://localhost:3000/me
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTdkY2IyYWFlYWFkNGNmZTM3ZjFmOSIsImlhdCI6MTYxNjM3MTAxMiwiZXhwIjoxNjE2NDU3NDEyfQ.jTIo-XsYshDihFdYttJinjNyeoBN4tCep-ImpI_p3XQ
+
+### Get tasks
+GET http://localhost:3000/tasks
+
+### Create Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTdkY2IyYWFlYWFkNGNmZTM3ZjFmOSIsImlhdCI6MTYxNjM3MTAxMiwiZXhwIjoxNjE2NDU3NDEyfQ.jTIo-XsYshDihFdYttJinjNyeoBN4tCep-ImpI_p3XQ
+
+{
+  "title": "my first task"
+}
+
+### Get single task
+GET http://localhost:3000/tasks/6057e08bb0396653a3c37b57
+
+### update single task
+PUT http://localhost:3000/tasks/6057e08bb0396653a3c37b57
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTdkY2IyYWFlYWFkNGNmZTM3ZjFmOSIsImlhdCI6MTYxNjM3MTAxMiwiZXhwIjoxNjE2NDU3NDEyfQ.jTIo-XsYshDihFdYttJinjNyeoBN4tCep-ImpI_p3XQ
+
+{
+  "title": "new task"
+}
+
+### delete single task
+DELETE http://localhost:3000/tasks/6057e08bb0396653a3c37b57
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTdkY2IyYWFlYWFkNGNmZTM3ZjFmOSIsImlhdCI6MTYxNjM3MTAxMiwiZXhwIjoxNjE2NDU3NDEyfQ.jTIo-XsYshDihFdYttJinjNyeoBN4tCep-ImpI_p3XQ
