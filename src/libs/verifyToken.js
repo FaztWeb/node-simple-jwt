@@ -9,7 +9,7 @@ export async function verifyToken(req, res, next) {
   if (!token) {
     return res
       .status(401)
-      .send({ auth: false, message: "No Token aws Provided" });
+      .send({ auth: false, message: "No Token was Provided" });
   }
 
   // decode the token
